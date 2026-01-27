@@ -3,6 +3,10 @@ title: Luxury Sedan
 description: Experience the pinnacle of automotive sophistication with our luxury sedans
 price: $75,000
 category: Luxury
+model: '2023'
+image: '/images/mercedes.jpg'
+
+
 specs:
   - AWD
   - Premium Sound
@@ -10,6 +14,7 @@ specs:
 ---
 
 # Luxury Sedan
+
 
 Experience the pinnacle of automotive sophistication with our luxury sedans. This vehicle combines power, elegance, and technology in one stunning package. With its refined interior and smooth ride, it offers an unmatched driving experience.
 

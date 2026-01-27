@@ -3,6 +3,10 @@ title: Sports Car
 description: Unleash the power of our high-performance sports cars
 price: $85,000
 category: Performance
+model: '2002'
+image: '/images/porsche.jpg'
+
+
 specs:
   - Turbo Engine
   - Carbon Fiber
@@ -10,6 +14,8 @@ specs:
 ---
 
 # Sports Car
+
+![Sports Car](/images/porsche.jpg)
 
 Unleash the power of our high-performance sports cars. Engineered for performance enthusiasts, this sports car delivers exhilarating acceleration and precise handling. Built for the track but comfortable on the street.
 

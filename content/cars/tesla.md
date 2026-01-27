@@ -1,11 +1,31 @@
 ---
 title: 'Tesla: Revolutionizing Electric Mobility'
 description: 'Explore the innovative electric vehicles and technology from Tesla'
+price: $75,000
+category: Electric
+model: '2023'
+image: '/images/tesla.jpg'
+
+
+specs:
+  - Autopilot
+  - Supercharging
+  - Long Range
 ---
 
 # Tesla: Revolutionizing Electric Mobility
 
-Tesla, Inc. is an American multinational automotive and clean energy company headquartered in Austin, Texas. Tesla specializes in electric vehicle manufacturing, battery energy storage from home to grid-scale, solar panel and solar roof tile manufacturing, and related products and services.
+![Tesla Car](/images/tesla.jpg)
+
+Tesla, Inc. is an American multinational automotive and clean energy company headquartered in Austin, Texas. Tesla specializes in electric vehicle manufacturing, battery energy storage from home to grid-scale, solar panel and solar roof tile manufacturing, and related products and services. The company is revolutionizing transportation with cutting-edge electric vehicle technology.
+
+## Specifications
+- Autopilot and Full Self-Driving (FSD) capabilities
+- Supercharger network access
+- Long-range battery technology
+- Over-the-air software updates
+- Minimalist interior design
+- 15-inch touchscreen display
 
 ## History
 
@@ -22,15 +42,13 @@ Tesla is at the forefront of electric vehicle technology with several groundbrea
 - Minimalist interior design with large touchscreen displays
 - Direct sales model bypassing traditional dealerships
 
-## Popular Models
+## Features
+- Regenerative braking system
+- Smart summon capability
+- Sentry mode security
+- Bioweapon defense mode
+- Dog mode climate control
+- Premium connectivity
 
-- **Model S**: Full-size luxury sedan with impressive range and performance
-- **Model 3**: Compact executive car targeting mass market adoption
-- **Model X**: Mid-size luxury crossover with falcon-wing doors
-- **Model Y**: Compact crossover built on Model 3 platform
-- **Cybertruck**: Futuristic electric pickup truck
-- **Roadster**: High-performance electric sports car (upcoming)
-
-## Sustainability Mission
-
-Tesla's mission is to accelerate the world's transition to sustainable transport and energy. The company operates Gigafactories worldwide to scale battery production and reduce environmental impact. Tesla also produces solar panels and energy storage solutions to create a complete sustainable energy ecosystem.
+## Performance
+Tesla vehicles deliver instant torque and exceptional performance with electric motors. The Model S Plaid produces over 1,000 horsepower, accelerating from 0-60 mph in under 2 seconds. With ranges exceeding 400 miles and access to the extensive Supercharger network, Tesla vehicles offer both performance and practicality.

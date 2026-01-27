@@ -1,80 +1,68 @@
-<script setup lang="ts">
-useSeoMeta({
-  title: 'Our Car Collection',
-  description: 'Browse our collection of premium vehicles from top manufacturers'
-})
-
-const carBrands = [
-  {
-    id: 'audi',
-    name: 'Audi',
-    description: 'German luxury vehicles known for Quattro all-wheel drive and advanced technology.',
-    path: '/cars/audi'
-  },
-  {
-    id: 'tesla',
-    name: 'Tesla',
-    description: 'Innovative electric vehicles with cutting-edge autonomous driving features.',
-    path: '/cars/tesla'
-  },
-  {
-    id: 'bmw',
-    name: 'BMW',
-    description: 'Bavarian engineering excellence with a focus on performance and luxury.',
-    path: '/cars/bmw'
-  },
-  {
-    id: 'mercedes',
-    name: 'Mercedes-Benz',
-    description: 'Premium luxury vehicles with a reputation for safety and comfort.',
-    path: '/cars/mercedes'
-  },
-  {
-    id: 'porsche',
-    name: 'Porsche',
-    description: 'High-performance sports cars with iconic design and racing heritage.',
-    path: '/cars/porsche'
-  },
-  {
-    id: 'toyota',
-    name: 'Toyota',
-    description: 'Reliable and efficient vehicles with excellent build quality.',
-    path: '/cars/toyota'
-  }
-]
-</script>
-
 <template>
   <div class="container mx-auto px-4 py-8">
-    <div class="mb-12 text-center">
-      <h1 class="text-4xl font-bold mb-4">Our Car Collection</h1>
-      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-        Discover premium vehicles from leading manufacturers around the world. 
-        Each brand offers unique features and technologies designed to enhance your driving experience.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <UPageCard
-        v-for="brand in carBrands"
-        :key="brand.id"
-        :title="brand.name"
-        :description="brand.description"
-        orientation="horizontal"
-        class="h-full"
+    <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Car Collection</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <UCard 
+        v-for="car in motor" 
+        :key="car._id" 
+        class="overflow-hidden hover:shadow-lg transition-shadow duration-300"
       >
-        <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden flex items-center justify-center w-32 h-32">
-          <span class="text-5xl font-bold text-gray-400">{{ brand.name.charAt(0) }}</span>
+        <div class="p-6">
+
+          <div class="mb-4">
+            <img 
+              v-if="car.meta.image" 
+              :src="car.meta.image" 
+              :alt="car.title" 
+              class="w-full h-48 object-cover rounded-lg"
+            />
+          </div>
+                    <h2 class="text-xl font-bold mb-2 text-gray-800">{{ car.title }}</h2>
+          <div class="space-y-2 mb-4">
+            <p class="text-gray-600"><span class="font-semibold">Description:</span> {{ car.description }}</p>
+            <p class="text-gray-600"><span class="font-semibold">Price:</span> {{ car.price }}</p>
+            <p class="text-gray-600"><span class="font-semibold">Category:</span> 
+              <UBadge :color="getCategoryColor(car.category)" variant="soft">{{ car.category }}</UBadge>
+            </p>
+            <p class="text-gray-600"><span class="font-semibold">Model:</span> {{ car.meta.model }}</p>
+            <div class="text-gray-600">
+              <span class="font-semibold">Specs:</span>
+              <div class="flex flex-wrap gap-1 mt-1">
+                <UBadge 
+                  v-for="spec in car.specs" 
+                  :key="spec" 
+                  color="gray" 
+                  variant="soft" 
+                  size="xs"
+                >
+                  {{ spec }}
+                </UBadge>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <template #footer>
-          <NuxtLink :to="brand.path">
-            <UButton variant="solid" color="primary">
-              Learn More
-            </UButton>
-          </NuxtLink>
-        </template>
-      </UPageCard>
+      </UCard>
     </div>
   </div>
 </template>
+
+<script setup>
+const motor = await queryCollection('cars').order('category', 'DESC').all()
+console.log(motor, 'this is from content');
+console.log(motor[0], 'first car data');
+
+const getCategoryColor = (category) => {
+  const colors = {
+    'Luxury': 'amber',
+    'Performance': 'red',
+    'Eco-Friendly': 'green',
+    'Reliability': 'blue',
+    'Electric': 'purple'
+  }
+  return colors[category] || 'gray'
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>

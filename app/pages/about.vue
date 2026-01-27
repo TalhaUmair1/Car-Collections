@@ -6,7 +6,7 @@
     <section class="">
       <div class="flex justify-center py-8">
               <img 
-                src="/mercedes.jpg" 
+                src="/images/mercedes.jpg" 
                 alt="Mercedes-Benz Luxury Car" 
                 class="rounded-xl shadow-2xl max-w-full h-auto border-4 border-white"
                 width="900"
@@ -24,7 +24,7 @@
             </div>
             <div class="flex justify-center py-8">
               <img 
-                src="/bmw.jpg" 
+                src="/images/bmw.jpg" 
                 alt="Mercedes-Benz Luxury Car" 
                 class="rounded-xl shadow-2xl max-w-full h-auto border-4 border-white"
                 width="900"

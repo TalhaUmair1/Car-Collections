@@ -3,6 +3,10 @@ title: Electric Vehicle
 description: Drive into the future with our eco-friendly electric vehicles
 price: $65,000
 category: Eco-Friendly
+model: '2023'
+image: '/images/tesla.jpg'
+
+
 specs:
   - Zero Emissions
   - Fast Charging
@@ -10,6 +14,8 @@ specs:
 ---
 
 # Electric Vehicle
+
+![Electric Vehicle](/images/tesla.jpg)
 
 Drive into the future with our eco-friendly electric vehicles. Combining sustainability with performance, this electric vehicle offers impressive range and rapid charging capabilities without sacrificing driving dynamics.
 

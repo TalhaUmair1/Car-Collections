@@ -32,7 +32,7 @@ useSeoMeta({
         
         <div class="md:w-1/2 flex justify-center">
           <img 
-            src="/audi.jpg" 
+            src="/images/audi.jpg" 
             alt="Audi Luxury Car" 
             class="rounded-xl shadow-2xl max-w-full h-auto border-4 border-white"
             width="600"

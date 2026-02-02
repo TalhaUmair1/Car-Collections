@@ -15,7 +15,9 @@ export default defineContentConfig({
         description: z.string(),
         price: z.string(),
         category: z.string(),
-        specs: z.array(z.string())
+        model: z.string().optional(),
+        image: z.string().optional(),
+        specs: z.array(z.string()).optional()
       })
     })
   }

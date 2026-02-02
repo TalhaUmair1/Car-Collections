@@ -2,9 +2,9 @@
 const route = useRoute()
 const slug = route.params.slug
 
-const { data: post } = await useAsyncData(`car-${slug}`, () => {
-  return queryCollection('cars').path(`/cars/${slug}`).first()
-})
+const { data: post } = await useAsyncData(`car-${slug}`, () =>
+  queryCollection('cars').path(`/cars/${slug}`).first()
+)
 
 if (!post.value) {
   throw createError({ statusCode: 404, message: 'Car not found' })

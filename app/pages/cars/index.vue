@@ -71,12 +71,12 @@
             </div>
             
             <!-- See More Link -->
-            <NuxtLink 
-              :to="`/cars/${getFilenameFromPath(car._path)}`" 
-              class="block w-full py-2 px-4 bg-gray-800 hover:bg-gray-900 text-white text-center rounded-lg transition-colors duration-300 font-medium"
-            >
-              View Details
-            </NuxtLink>
+<NuxtLink 
+  :to="`/cars/${getSlugFromPath(car)}`" 
+  class="block w-full py-2 px-4 bg-gray-800 hover:bg-gray-900 text-white text-center rounded-lg transition-colors duration-300 font-medium"
+>
+  View Details
+</NuxtLink>
           </div>
         </div>
       </div>
@@ -101,10 +101,18 @@ const getCategoryColor = (category) => {
   return colors[category] || 'gray'
 }
 
-const getFilenameFromPath = (path) => {
-  // Extract filename without extension from path like '/cars/bmw.md'
-  if (!path) return '';
-  return path.split('/').pop().replace('.md', '');
+const getSlugFromPath = (car) => {
+  // Accepts a car item, extract slug from _path or id
+  const raw = car?._path ?? car?.id ?? ''
+  if (!raw) return ''
+  let p = raw
+  // remove extension
+  p = p.replace(/\.md$/, '')
+  // trim leading slashes
+  while (p.startsWith('/')) p = p.slice(1)
+  // remove leading 'cars/' prefixes repeatedly
+  while (p.startsWith('cars/')) p = p.slice(5)
+  return p
 }
 </script>
 

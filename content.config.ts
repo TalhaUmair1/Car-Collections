@@ -13,7 +13,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         description: z.string(),
-        price: z.string(),
+        price: z.string().optional(),
         category: z.string(),
         model: z.string().optional(),
         image: z.string().optional(),

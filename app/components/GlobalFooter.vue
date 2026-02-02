@@ -21,9 +21,9 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">Collections</h3>
           <ul class="space-y-2">
-            <li><NuxtLink to="/luxury" class="text-sm text-muted-foreground hover:text-primary transition-colors">Luxury Cars</NuxtLink></li>
-            <li><NuxtLink to="/sports" class="text-sm text-muted-foreground hover:text-primary transition-colors">Sports Cars</NuxtLink></li>
-            <li><NuxtLink to="/electric" class="text-sm text-muted-foreground hover:text-primary transition-colors">Electric Vehicles</NuxtLink></li>
+            <li><NuxtLink :to="{ path: '/cars', query: { category: 'Luxury' } }" class="text-sm text-muted-foreground hover:text-primary transition-colors">Luxury Cars</NuxtLink></li>
+            <li><NuxtLink :to="{ path: '/cars', query: { category: 'Performance' } }" class="text-sm text-muted-foreground hover:text-primary transition-colors">Performance Cars</NuxtLink></li>
+            <li><NuxtLink :to="{ path: '/cars', query: { category: 'Electric' } }" class="text-sm text-muted-foreground hover:text-primary transition-colors">Electric Vehicles</NuxtLink></li>
           </ul>
         </div>
         
